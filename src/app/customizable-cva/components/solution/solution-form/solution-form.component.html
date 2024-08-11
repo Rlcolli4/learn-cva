@@ -1,0 +1,12 @@
+<form class="l--full-view" [formGroup]="form" (ngSubmit)="submitForm()">
+  <div class="contact-side">
+    <app-contact-form formControlName="contact"></app-contact-form>
+  </div>
+  <div class="message-side">
+    <app-message-form formControlName="message"></app-message-form>
+  </div>
+  <div class="l--bottom-right">
+    <button type="button" class="th--italics" mat-raised-button color="accent" (click)="form.reset()">Reset</button>
+    <button type="submit" mat-flat-button [disabled]="!form.valid">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,75 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+form {
+  padding: 10px;
+}
+
+.l-- {
+  &full-view {
+    height: 100%;
+    width: 100%;
+  }
+
+  &no-overflow {
+    overflow: hidden;
+  }
+
+  &centered-container {
+    //improved way of handling centered items. Parent needs to be position absolute or relative for this to work.
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &form-input- {
+    &basic {
+      width: 250px;
+    }
+
+    &long {
+      width: 500px;
+    }
+
+    &short {
+      width: 100px;
+    }
+  }
+
+  &bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &nth-field {
+    margin-left: 10px;
+  }
+}
+
+.th-- {
+  &italics {
+    font-style: italic;
+  }
+
+  &content-gb {
+    background-color: #C0C0C0;
+  }
+
+  &nav-divider {
+    border-right: 2px solid #C0C0C0 !important;
+    border-radius: 0 !important;
+  }
+}

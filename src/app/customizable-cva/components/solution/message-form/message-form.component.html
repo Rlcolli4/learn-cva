@@ -1,0 +1,29 @@
+<form class="l--full-view" [formGroup]="form" (ngSubmit)="submitForm()">
+  <div>
+    <mat-form-field>
+      <mat-label>Preferred Contact</mat-label>
+      <mat-select formControlName="department">
+        @for (departmentOption of departmentOptions; track departmentOption) {
+        <mat-option [value]="departmentOption.id">{{departmentOption.name}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Priority</mat-label>
+      <mat-select formControlName="urgency">
+        @for (urgencyOption of urgencyOptions; track urgencyOption) {
+        <mat-option [value]="urgencyOption.id">{{urgencyOption.name}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="message-container">
+      <mat-label>Request</mat-label>
+      <textarea matInput formControlName="message" placeholder="Please Place Your Message Here"></textarea>
+    </mat-form-field>
+  </div>
+
+</form>
